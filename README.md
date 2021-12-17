@@ -14,3 +14,20 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 After that, proceed to [`http://localhost:4000/graphiql`](http://localhost:4000/graphiql) where you will see the GraphiQL dev environment, and explore.
 
 It's a good idea to have 2 windows open, one with the normal view, and the other with GraphiQL.
+
+```elixir
+mutation add_user {
+  addUser(name: "Elixir", age: 10) {
+    id
+  }
+}
+
+subscription {
+  userAdded {
+  name
+  age
+  color
+  uuid
+ }
+}
+```

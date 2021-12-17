@@ -14,12 +14,13 @@ config :zoom, ZoomWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "uqQ0lco/mLVNPnYiNRFe65yWry/TnpBg/PML9dl57iCFLv4ALFRLw50WC47yqq4w",
   render_errors: [view: ZoomWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Zoom.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub_server: Zoom.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
-  metadata: [:user_id]
+  metadata: [:user_id],
+  level: :debug
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
