@@ -12,7 +12,7 @@ defmodule Zoom.Application do
       supervisor(ZoomWeb.Endpoint, []),
       {Phoenix.PubSub, [name: Zoom.PubSub, adapter: Phoenix.PubSub.PG2]},
       supervisor(Absinthe.Subscription, [ZoomWeb.Endpoint]),
-      AddUserSubscription.supervisor()
+      #AddUserSubscription.supervisor()
     ]
 
     opts = [strategy: :one_for_one, name: Zoom.Supervisor]
