@@ -31,3 +31,11 @@ subscription {
  }
 }
 ```
+
+Neuron subscription is visible in terminal window:
+```
+[debug] Absinthe Subscription Publication
+Field Topic: [topic: #Function<0.131774547/1 in ZoomWeb.Schema.__absinthe_function__/2>]
+Subscription id: "__absinthe__:doc:-576460752303423486:B4ABBE22405C0A6D8ADB4BC10AE99107E16A301630302C4EBD4C20CFF7699E73"
+Data: %{data: %{"userAdded" => %{"age" => 10, "color" => nil, "name" => "Elixir", "uuid" => nil}}}
+```
