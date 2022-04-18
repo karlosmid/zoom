@@ -34,18 +34,19 @@ defmodule Zoom.Mixfile do
   defp deps do
     [
       {:absinthe, "~> 1.4"},
-      {:absinthe_plug, "~> 1.4"},
-      {:absinthe_phoenix, "~> 1.4"},
-      {:cowboy, "~> 1.0"},
+      {:absinthe_plug, "~> 1.5"},
+      {:absinthe_phoenix, "~> 2.0.2"},
+      {:plug_cowboy, "~> 2.0"},
       {:credo, "~> 0.10", only: [:dev, :test], runtime: false},
       {:gettext, "~> 0.11"},
-      {:phoenix, "~> 1.3"},
-      {:phoenix_pubsub, "~> 1.0"},
+      {:phoenix, "~> 1.5"},
+      {:phoenix_pubsub, "~> 2.0"},
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
-      {:poison, "~> 3.1"}
+      {:poison, "~> 3.1"},
+      {:neuron, git: "https://github.com/karlosmid/neuron", branch: "master"}
     ]
   end
 

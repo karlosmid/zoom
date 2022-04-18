@@ -10,7 +10,9 @@ defmodule Zoom.Application do
     children = [
       supervisor(Zoom.Repo, []),
       supervisor(ZoomWeb.Endpoint, []),
-      supervisor(Absinthe.Subscription, [ZoomWeb.Endpoint])
+      {Phoenix.PubSub, [name: Zoom.PubSub, adapter: Phoenix.PubSub.PG2]},
+      supervisor(Absinthe.Subscription, [ZoomWeb.Endpoint]),
+      #AddUserSubscription.supervisor()
     ]
 
     opts = [strategy: :one_for_one, name: Zoom.Supervisor]
